@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">ToDoList</string>
+
+    <string name="dialog_title_error">Erro</string>
+    <string name="dialog_ok">OK</string>
+    <string name="label_edit">Editar</string>
+    <string name="label_delete">Deletar</string>
+
+    <!-- MainActivity -->
+    <string name="tv_title">Tarefas de Hoje</string>
+    <string name="tv_sub_title">Tarefas</string>
+    <string name="tv_no_task_message">Ops! Você não possui nenhuma tarefa para hoje</string>
+
+    <!-- Add Task -->
+    <string name="add_task_toolbar">Criar Tarefa</string>
+    <string name="add_task_hint_title">Título</string>
+    <string name="add_task_hint_description">Descrição</string>
+    <string name="add_task_hint_date">Data</string>
+    <string name="add_task_hint_hour">Horário</string>
+    <string name="add_task_btn_cancel">Cancelar</string>
+    <string name="add_task_btn_create">Salvar tarefa</string>
+    <string name="add_task_message_title_required">Por favor, preenche o campo de Título</string>
+    <string name="add_task_message_description_required">Por favor, preenche o campo de Descrição</string>
+    <string name="add_task_message_date_required">Por favor, preenche o campo de Data</string>
+    <string name="add_task_message_hour_required">Por favor, preenche o campo de Horário</string>
+</resources>

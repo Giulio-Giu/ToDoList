@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.AddTaskActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_AddTask"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_navigate_before_24"
+        app:title="@string/add_task_toolbar" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLine_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="32dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLine_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="32dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_AddTask_title"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/add_task_hint_title"
+        app:layout_constraintEnd_toEndOf="@id/guideLine_end"
+        app:layout_constraintStart_toStartOf="@id/guideLine_start"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_AddTask">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_AddTask_description"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/add_task_hint_description"
+        app:layout_constraintEnd_toEndOf="@id/guideLine_end"
+        app:layout_constraintStart_toStartOf="@id/guideLine_start"
+        app:layout_constraintTop_toBottomOf="@id/til_AddTask_title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|start"
+            android:inputType="textMultiLine"
+            android:minLines="4" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_AddTask_date"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/add_task_hint_date"
+        app:layout_constraintEnd_toStartOf="@id/til_AddTask_hour"
+        app:layout_constraintStart_toStartOf="@id/guideLine_start"
+        app:layout_constraintTop_toBottomOf="@id/til_AddTask_description"
+        app:startIconDrawable="@drawable/ic_calendar_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:inputType="none" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_AddTask_hour"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/add_task_hint_hour"
+        app:layout_constraintEnd_toEndOf="@id/guideLine_end"
+        app:layout_constraintStart_toEndOf="@id/til_AddTask_date"
+        app:layout_constraintTop_toTopOf="@id/til_AddTask_date"
+        app:startIconDrawable="@drawable/ic_timer_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:inputType="none" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mbtn_AddTask_cancel"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/add_task_btn_cancel"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@id/mbtn_AddTask_create"
+        app:layout_constraintEnd_toEndOf="@id/guideLine_end"
+        app:layout_constraintStart_toStartOf="@id/guideLine_start" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mbtn_AddTask_create"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/add_task_btn_create"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideLine_end"
+        app:layout_constraintStart_toStartOf="@id/guideLine_start" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
